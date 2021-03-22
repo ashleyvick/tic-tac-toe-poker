@@ -14,7 +14,7 @@ function play(clickedID){
             board[clickedID] = 'O'
     }
     console.log(board)
-}
+
 
 const topLeft = board[0];
 const topMiddle = board[1];
@@ -28,12 +28,12 @@ const lowerRight = board[8]
 
 if (topLeft !== undefined && topLeft === topMiddle && topLeft === topRight) {
 alert(`${topLeft} is the WINNER!`);
-return;
+
 }
 
 if (middleLeft !== undefined && middleLeft === middleMiddle && middleLeft === middleRight) {
     alert(`${middleLeft} is the WINNER!`);
-    return;
+    
 }
 
 if (lowerLeft !== undefined && lowerLeft === lowerMiddle && lowerLeft === lowerRight) {
@@ -42,28 +42,28 @@ if (lowerLeft !== undefined && lowerLeft === lowerMiddle && lowerLeft === lowerR
 
 if (topLeft !== undefined && topLeft === middleLeft && topLeft === lowerLeft) {
     alert(`${topLeft} is the WINNER!`);
-    return;
+    
 }
 
 if (topMiddle !== undefined && topMiddle === middleMiddle && topMiddle === lowerMiddle) {
     alert(`${topMiddle} is the WINNER!`);
-    return;
+    
 }
 
 if (topRight !== undefined && topRight === middleRight && topRight === lowerRight) {
     alert(`${topRight} is the WINNER!`);
-    return;
+    
 }
 
 if (topLeft !== undefined && topLeft === middleMiddle && topLeft === lowerRight) {
     alert(`${topLeft} is the WINNER!`);
-    return;
+    
 
 }
 
 if (topRight !== undefined && topRight === middleMiddle && topRight === lowerLeft) {
     alert(`${topRight} is the WINNER!`);
-    return;
+    
 }
 
 let boardFull = true;
@@ -75,4 +75,5 @@ for (let i = 0; i <= 8; i++) {
 
 if (boardFull === true) {
     alert("Cat's game, there is no winner");
+}
 }
